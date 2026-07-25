@@ -538,3 +538,103 @@
     border-left: 0;
   }
 }
+
+/* ======================================================
+   Homepage Call to Action
+====================================================== */
+
+.home-cta {
+  background-color: var(--color-white);
+}
+
+.home-cta__panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  overflow: hidden;
+  padding: var(--space-10) var(--space-6);
+  background-color: var(--color-cream-light);
+}
+
+.home-cta__panel::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4rem;
+  height: 1px;
+  background-color: var(--color-gold);
+  content: "";
+}
+
+.home-cta__content {
+  position: relative;
+  z-index: var(--z-content);
+}
+
+.home-cta__title {
+  max-width: 15ch;
+  margin-top: var(--space-4);
+  color: var(--color-green);
+}
+
+.home-cta__text {
+  max-width: 34rem;
+  margin-top: var(--space-5);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.home-cta__actions {
+  position: relative;
+  z-index: var(--z-content);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+/* ======================================================
+   Homepage CTA Tablet
+====================================================== */
+
+@media (min-width: 48rem) {
+  .home-cta__panel {
+    padding: var(--space-14) var(--space-12);
+  }
+
+  .home-cta__actions {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .home-cta__text {
+    font-size: var(--font-size-base);
+  }
+}
+
+/* ======================================================
+   Homepage CTA Desktop
+====================================================== */
+
+@media (min-width: 64rem) {
+  .home-cta__panel {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-16);
+    padding: var(--space-16);
+  }
+
+  .home-cta__content {
+    max-width: 42rem;
+  }
+
+  .home-cta__actions {
+    flex: 0 0 auto;
+  }
+
+  .home-cta__title {
+    font-size: clamp(2.75rem, 4vw, 4rem);
+  }
+}
