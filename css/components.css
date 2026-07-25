@@ -1,0 +1,505 @@
+/* =========================================================
+   Sukanya Thai Massage
+   Reusable Components
+========================================================= */
+
+/* ======================================================
+   Buttons
+====================================================== */
+
+.button {
+  display: inline-flex;
+  min-height: var(--button-height-md);
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--button-padding-md);
+  border: var(--border-width-thin) solid transparent;
+  border-radius: var(--button-radius);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  letter-spacing: var(--button-letter-spacing);
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base),
+    transform var(--transition-base);
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.button--primary {
+  border-color: var(--color-button-primary);
+  background-color: var(--color-button-primary);
+  color: var(--color-button-primary-text);
+}
+
+.button--primary:hover {
+  border-color: var(--color-button-primary-hover);
+  background-color: var(--color-button-primary-hover);
+  color: var(--color-white);
+}
+
+.button--secondary {
+  border-color: var(--color-gold);
+  background-color: var(--color-button-secondary);
+  color: var(--color-button-secondary-text);
+}
+
+.button--secondary:hover {
+  background-color: var(--color-button-secondary-hover);
+  color: var(--color-gold-dark);
+}
+
+.button--light {
+  border-color: var(--color-white);
+  background-color: var(--color-white);
+  color: var(--color-gold-dark);
+}
+
+.button--light:hover {
+  border-color: var(--color-cream);
+  background-color: var(--color-cream);
+  color: var(--color-gold-dark);
+}
+
+.button--small {
+  min-height: var(--button-height-sm);
+  padding: var(--button-padding-sm);
+}
+
+.button--large {
+  min-height: var(--button-height-lg);
+  padding: var(--button-padding-lg);
+}
+
+.button--icon {
+  width: var(--button-height-md);
+  padding: 0;
+}
+
+.button--full {
+  width: 100%;
+}
+
+/* ======================================================
+   Text Links
+====================================================== */
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-gold);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+.text-link::after {
+  content: "→";
+  transition: transform var(--transition-base);
+}
+
+.text-link:hover::after {
+  transform: translateX(0.25rem);
+}
+
+/* ======================================================
+   Cards
+====================================================== */
+
+.card {
+  overflow: hidden;
+  border: var(--border-default);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-white);
+}
+
+.card__media {
+  overflow: hidden;
+}
+
+.card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.card:hover .card__media img {
+  transform: scale(1.025);
+}
+
+.card__body {
+  padding: var(--space-6);
+}
+
+.card__title {
+  margin-bottom: var(--space-3);
+  color: var(--color-green);
+  font-family: var(--font-body);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+.card__text {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.card--minimal {
+  border: 0;
+  border-radius: 0;
+}
+
+.card--minimal .card__body {
+  padding-inline: 0;
+}
+
+.card--soft {
+  border-color: transparent;
+  background-color: var(--color-surface);
+}
+
+/* ======================================================
+   Treatment Cards
+====================================================== */
+
+.treatment-card {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  background-color: var(--color-white);
+}
+
+.treatment-card__image {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.treatment-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.treatment-card:hover .treatment-card__image img {
+  transform: scale(1.03);
+}
+
+.treatment-card__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-8) var(--space-5);
+  text-align: center;
+}
+
+.treatment-card__title {
+  max-width: 18ch;
+  color: var(--color-gold);
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wide);
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+/* ======================================================
+   Feature Items
+====================================================== */
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  text-align: center;
+}
+
+.feature__icon {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  color: var(--color-gold);
+}
+
+.feature__icon svg {
+  width: var(--icon-size-lg);
+  height: var(--icon-size-lg);
+  stroke: currentColor;
+  stroke-width: var(--icon-stroke-width);
+}
+
+.feature__title {
+  color: var(--color-green);
+  font-family: var(--font-body);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+}
+
+.feature__text {
+  max-width: 28ch;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+/* ======================================================
+   Information Box
+====================================================== */
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-8);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+}
+
+.info-box__icon {
+  flex: 0 0 auto;
+  color: var(--color-gold);
+}
+
+.info-box__content {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.info-box__content p + p {
+  margin-top: var(--space-2);
+}
+
+/* ======================================================
+   Icon Button
+====================================================== */
+
+.icon-button {
+  display: inline-grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border: var(--border-default);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-cream-light);
+  color: var(--color-gold);
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base),
+    transform var(--transition-base);
+}
+
+.icon-button:hover {
+  border-color: var(--color-gold);
+  background-color: var(--color-gold);
+  color: var(--color-white);
+  transform: translateX(0.125rem);
+}
+
+.icon-button svg {
+  width: var(--icon-size-md);
+  height: var(--icon-size-md);
+}
+
+/* ======================================================
+   Badges and Labels
+====================================================== */
+
+.eyebrow {
+  color: var(--color-gold);
+  font-size: var(--section-label-size);
+  font-weight: var(--section-label-weight);
+  letter-spacing: var(--section-label-spacing);
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-cream);
+  color: var(--color-gold-dark);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+/* ======================================================
+   Logo
+====================================================== */
+
+.logo {
+  display: inline-block;
+  color: var(--color-gold);
+}
+
+.logo img,
+.logo svg {
+  width: auto;
+  height: 3.5rem;
+}
+
+.logo--small img,
+.logo--small svg {
+  height: 2.75rem;
+}
+
+.logo--large img,
+.logo--large svg {
+  height: 5rem;
+}
+
+/* ======================================================
+   Contact Detail
+====================================================== */
+
+.contact-detail {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.contact-detail__icon {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  color: var(--color-gold);
+}
+
+.contact-detail__icon svg {
+  width: var(--icon-size-md);
+  height: var(--icon-size-md);
+}
+
+.contact-detail__label {
+  margin-bottom: var(--space-2);
+  color: var(--color-gold-dark);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+.contact-detail__text {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  line-height: 1.7;
+}
+
+/* ======================================================
+   Call-to-action Panel
+====================================================== */
+
+.cta-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-8);
+  padding: var(--space-8);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+}
+
+.cta-panel__title {
+  color: var(--color-green);
+  font-family: var(--font-body);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+.cta-panel__text {
+  margin-top: var(--space-3);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+/* ======================================================
+   Table
+====================================================== */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.price-table {
+  width: 100%;
+  min-width: 42rem;
+  border-collapse: collapse;
+}
+
+.price-table th,
+.price-table td {
+  padding: var(--space-4);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.price-table th:first-child,
+.price-table td:first-child {
+  text-align: left;
+}
+
+.price-table thead th {
+  color: var(--color-green);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+.price-table tbody th {
+  color: var(--color-gold-dark);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.price-table tbody td {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+/* ======================================================
+   Desktop Enhancements
+====================================================== */
+
+@media (min-width: 48rem) {
+  .info-box {
+    flex-direction: row;
+    align-items: center;
+    padding: var(--space-10);
+  }
+
+  .info-box__icon {
+    padding-right: var(--space-8);
+    border-right: var(--border-gold);
+  }
+
+  .cta-panel {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-10) var(--space-12);
+  }
+}
