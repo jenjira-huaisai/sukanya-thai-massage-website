@@ -470,3 +470,71 @@
     font-size: var(--font-size-lg);
   }
 }
+
+/* ======================================================
+   Homepage Features
+====================================================== */
+
+.home-features {
+  background-color: var(--color-cream);
+}
+
+.home-features__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-10);
+  margin-top: var(--space-12);
+}
+
+.home-features .feature {
+  padding: var(--space-8) var(--space-6);
+  border-top: var(--border-gold);
+}
+
+.home-features .feature__icon {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.home-features .feature__icon svg {
+  width: 2rem;
+  height: 2rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.home-features .feature__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+.home-features .feature__text {
+  max-width: 24rem;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-body);
+}
+
+/* ======================================================
+   Homepage Features Tablet
+====================================================== */
+
+@media (min-width: 48rem) {
+  .home-features__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-8);
+    margin-top: var(--space-16);
+  }
+
+  .home-features .feature {
+    padding: var(--space-10) var(--space-6);
+    border-top: 0;
+    border-left: var(--border-default);
+  }
+
+  .home-features .feature:first-child {
+    border-left: 0;
+  }
+}
