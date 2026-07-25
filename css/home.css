@@ -1,0 +1,219 @@
+/* =========================================================
+   Sukanya Thai Massage
+   Homepage Styles
+========================================================= */
+
+/* ======================================================
+   Hero
+====================================================== */
+
+.hero {
+  position: relative;
+  display: grid;
+  min-height: calc(100svh - var(--header-height-mobile));
+  overflow: hidden;
+  background-color: var(--color-cream-light);
+  isolation: isolate;
+}
+
+.hero__media,
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.hero__media {
+  z-index: -3;
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 62% center;
+}
+
+.hero__overlay {
+  z-index: -2;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.98) 0%,
+      rgba(255, 255, 255, 0.94) 25%,
+      rgba(255, 255, 255, 0.75) 52%,
+      rgba(255, 255, 255, 0.14) 78%,
+      rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.hero__inner {
+  display: flex;
+  align-items: center;
+  padding-block: var(--space-16) var(--space-24);
+}
+
+.hero__content {
+  display: flex;
+  width: min(100%, 35rem);
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero__eyebrow {
+  margin-bottom: var(--space-5);
+  color: var(--color-gold);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-uppercase);
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.hero__title {
+  max-width: 8ch;
+  color: var(--color-green);
+  font-size: clamp(3.5rem, 15vw, 5.5rem);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-tight);
+  line-height: 0.9;
+}
+
+.hero__text {
+  max-width: 31rem;
+  margin-top: var(--space-8);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  line-height: 1.9;
+}
+
+.hero__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.hero__scroll {
+  position: absolute;
+  bottom: var(--space-6);
+  left: 50%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--color-text-muted);
+  font-size: 0.625rem;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  transform: translateX(-50%);
+}
+
+.hero__scroll:hover {
+  color: var(--color-gold);
+}
+
+.hero__scroll-line {
+  display: block;
+  width: 1px;
+  height: 2.5rem;
+  background-color: currentColor;
+}
+
+/* ======================================================
+   Hero Image Fallback
+====================================================== */
+
+.hero__image:not([src]),
+.hero__image[src=""] {
+  visibility: hidden;
+}
+
+/* ======================================================
+   Tablet
+====================================================== */
+
+@media (min-width: 48rem) {
+  .hero {
+    min-height: 46rem;
+  }
+
+  .hero__inner {
+    padding-block: var(--space-20) var(--space-28);
+  }
+
+  .hero__image {
+    object-position: 68% center;
+  }
+
+  .hero__title {
+    font-size: clamp(4.5rem, 9vw, 6.75rem);
+  }
+
+  .hero__text {
+    font-size: var(--font-size-base);
+  }
+
+  .hero__actions {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-8);
+  }
+}
+
+/* ======================================================
+   Desktop
+====================================================== */
+
+@media (min-width: 64rem) {
+  .hero {
+    min-height: calc(100svh - var(--header-height-desktop));
+  }
+
+  .hero__inner {
+    padding-block: var(--space-24) var(--space-32);
+  }
+
+  .hero__content {
+    width: min(46%, 38rem);
+  }
+
+  .hero__image {
+    object-position: center;
+  }
+
+  .hero__overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0.97) 18%,
+        rgba(255, 255, 255, 0.8) 37%,
+        rgba(255, 255, 255, 0.3) 55%,
+        rgba(255, 255, 255, 0) 72%
+      );
+  }
+
+  .hero__title {
+    font-size: clamp(5rem, 7vw, 7.25rem);
+  }
+
+  .hero__scroll {
+    display: flex;
+  }
+}
+
+/* ======================================================
+   Large Desktop
+====================================================== */
+
+@media (min-width: 80rem) {
+  .hero__content {
+    width: 42%;
+  }
+
+  .hero__title {
+    font-size: 7.25rem;
+  }
+}
