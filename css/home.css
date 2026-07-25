@@ -354,3 +354,119 @@
     font-size: clamp(2.75rem, 4vw, 4.25rem);
   }
 }
+
+/* ======================================================
+   Homepage Treatments
+====================================================== */
+
+.home-treatments {
+  background-color: var(--color-white);
+}
+
+.home-treatments__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  margin-top: var(--space-12);
+}
+
+.home-treatments .treatment-card {
+  overflow: hidden;
+  border: var(--border-default);
+  background-color: var(--color-white);
+  transition:
+    border-color var(--transition-base),
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.home-treatments .treatment-card:hover {
+  border-color: var(--color-border-dark);
+  box-shadow: var(--shadow-soft);
+  transform: translateY(-0.25rem);
+}
+
+.treatment-card__link {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  color: inherit;
+}
+
+.treatment-card__link:hover {
+  color: inherit;
+}
+
+.home-treatments .treatment-card__image {
+  aspect-ratio: 4 / 3;
+}
+
+.home-treatments .treatment-card__content {
+  align-items: flex-start;
+  padding: var(--space-6);
+  text-align: left;
+}
+
+.home-treatments .treatment-card__title {
+  max-width: none;
+  color: var(--color-green);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0;
+  line-height: var(--line-height-heading);
+  text-transform: none;
+}
+
+.treatment-card__description {
+  margin-top: var(--space-4);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-body);
+}
+
+.home-treatments .text-link {
+  margin-top: auto;
+  padding-top: var(--space-6);
+}
+
+.home-treatments__action {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-12);
+}
+
+/* ======================================================
+   Homepage Treatments Tablet
+====================================================== */
+
+@media (min-width: 48rem) {
+  .home-treatments__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-8);
+    margin-top: var(--space-16);
+  }
+
+  .home-treatments .treatment-card__content {
+    padding: var(--space-8);
+  }
+}
+
+/* ======================================================
+   Homepage Treatments Desktop
+====================================================== */
+
+@media (min-width: 64rem) {
+  .home-treatments__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+
+  .home-treatments .treatment-card__content {
+    padding: var(--space-6);
+  }
+
+  .home-treatments .treatment-card__title {
+    font-size: var(--font-size-lg);
+  }
+}
