@@ -22,6 +22,23 @@
    Shared layout
 ====================================================== */
 
+.home-treatments__heading{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+}
+
+.home-treatments__intro{
+    max-width:620px;
+
+    margin-inline:auto;
+
+    text-align:center;
+}
+
 .treatments-page-container {
   width: min(
     calc(100% - 40px),
