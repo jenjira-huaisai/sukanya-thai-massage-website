@@ -217,3 +217,140 @@
     font-size: 7.25rem;
   }
 }
+
+/* ======================================================
+   Homepage About
+====================================================== */
+
+.home-about {
+  background-color: var(--color-cream-light);
+}
+
+.home-about__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.home-about__media {
+  position: relative;
+  width: min(100%, 34rem);
+  margin-inline: auto;
+}
+
+.home-about__image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.home-about__experience {
+  position: absolute;
+  right: -0.75rem;
+  bottom: -1.5rem;
+  display: flex;
+  width: 8.5rem;
+  min-height: 8.5rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  background-color: var(--color-gold);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.home-about__experience-number {
+  font-family: var(--font-heading);
+  font-size: 2.75rem;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1;
+}
+
+.home-about__experience-text {
+  margin-top: var(--space-2);
+  font-size: 0.625rem;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-wide);
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.home-about__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.home-about__title {
+  max-width: 14ch;
+  margin-top: var(--space-4);
+}
+
+.home-about__content .section-divider {
+  margin-block: var(--space-6);
+}
+
+.home-about__text {
+  display: flex;
+  max-width: 36rem;
+  flex-direction: column;
+  gap: var(--space-4);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.home-about__content .button {
+  margin-top: var(--space-8);
+}
+
+/* ======================================================
+   Homepage About Tablet
+====================================================== */
+
+@media (min-width: 48rem) {
+  .home-about__grid {
+    gap: var(--space-16);
+  }
+
+  .home-about__experience {
+    right: -1.5rem;
+    bottom: -2rem;
+    width: 10rem;
+    min-height: 10rem;
+  }
+
+  .home-about__experience-number {
+    font-size: 3.25rem;
+  }
+
+  .home-about__text {
+    font-size: var(--font-size-base);
+  }
+}
+
+/* ======================================================
+   Homepage About Desktop
+====================================================== */
+
+@media (min-width: 64rem) {
+  .home-about__grid {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: var(--space-24);
+  }
+
+  .home-about__media {
+    width: 100%;
+    margin-inline: 0;
+  }
+
+  .home-about__content {
+    padding-right: var(--space-8);
+  }
+
+  .home-about__title {
+    font-size: clamp(2.75rem, 4vw, 4.25rem);
+  }
+}
