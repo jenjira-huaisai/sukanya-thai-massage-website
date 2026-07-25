@@ -1,44 +1,96 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="description"
-    content="Sukanya Thaise Massage biedt authentieke Thaise massagetechnieken in een rustige en ontspannen omgeving."
-  >
+    <meta name="description"
+        content="Sukanya Thaise Massage biedt authentieke Thaise massagetechnieken in een rustige en ontspannen omgeving.">
 
-  <title>Sukanya Thaise Massage</title>
+    <title>Sukanya Thaise Massage</title>
 
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/home.css">
-  <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
-  <div class="site">
-    <header class="site-header">
-      <!-- Header and navigation will be added next -->
-    </header>
+    <div class="site">
+        <header class="site-header" data-header>
+            <div class="container site-header__inner">
+                <button class="menu-toggle" type="button" aria-label="Menu openen" aria-expanded="false"
+                    aria-controls="primary-navigation" data-menu-toggle>
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                </button>
 
-    <main>
-      <!-- Homepage sections will be added step by step -->
-    </main>
+                <a class="site-logo" href="index.html" aria-label="Sukanya Thaise Massage home">
+                    <span class="site-logo__name">Sukanya</span>
+                    <span class="site-logo__subtitle">Thaise Massage</span>
+                </a>
 
-    <footer class="site-footer">
-      <!-- Footer will be added later -->
-    </footer>
-  </div>
+                <a class="header-contact" href="contact.html">
+                    Contact
+                </a>
+            </div>
 
-  <script src="js/menu.js" defer></script>
-  <script src="js/main.js" defer></script>
+            <nav class="site-navigation" id="primary-navigation" aria-label="Hoofdnavigatie" data-navigation>
+                <div class="container site-navigation__inner">
+                    <ul class="site-navigation__list">
+                        <li>
+                            <a class="site-navigation__link is-active" href="index.html">
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="site-navigation__link" href="behandelingen.html">
+                                Behandelingen
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="site-navigation__link" href="tarieven.html">
+                                Tarieven
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="site-navigation__link" href="over-sukanya.html">
+                                Over Sukanya
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="site-navigation__link" href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="site-navigation__footer">
+                        <p>Rust, aandacht en balans.</p>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Homepage sections will be added step by step -->
+        </main>
+
+        <footer class="site-footer">
+            <!-- Footer will be added later -->
+        </footer>
+    </div>
+
+    <script src="js/menu.js" defer></script>
+    <script src="js/main.js" defer></script>
 </body>
+
 </html>
