@@ -1,0 +1,382 @@
+/* =========================================================
+   Sukanya Oosterse Massage Techniek
+   Contact Page
+========================================================= */
+
+/* ======================================================
+   Hero
+====================================================== */
+
+.contact-hero {
+  position: relative;
+  min-height: 620px;
+  overflow: hidden;
+  background-color: var(--color-white);
+}
+
+.contact-hero__media {
+  position: absolute;
+  inset: 0;
+}
+
+.contact-hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.contact-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.98) 30%,
+      rgba(255, 255, 255, 0.86) 44%,
+      rgba(255, 255, 255, 0.28) 62%,
+      rgba(255, 255, 255, 0) 78%
+    );
+}
+
+.contact-hero__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 620px;
+  align-items: center;
+}
+
+.contact-hero__content {
+  width: min(100%, 440px);
+  padding-block: 64px;
+}
+
+.contact-hero__title {
+  color: var(--color-green);
+  font-family: var(--font-body);
+  font-size: clamp(1.5rem, 2.1vw, 2rem);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.contact-hero__text {
+  max-width: 390px;
+  margin-top: 28px;
+  color: var(--color-text);
+  font-size: 0.76rem;
+  line-height: 2;
+}
+
+/* ======================================================
+   Contact details
+====================================================== */
+
+.contact-details {
+  padding-block: 94px 112px;
+  background-color: var(--color-cream-light);
+}
+
+.contact-details__heading {
+  color: var(--color-gold-dark);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.contact-details__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 70px;
+  margin-top: 62px;
+}
+
+.contact-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.contact-card__icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  color: var(--color-gold-dark);
+}
+
+.contact-card__icon svg {
+  width: 30px;
+  height: 30px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.35;
+}
+
+.contact-card__title {
+  margin-top: 4px;
+  color: var(--color-gold-dark);
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.035em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.contact-card__text {
+  margin-top: 18px;
+  color: var(--color-text);
+  font-size: 0.7rem;
+  line-height: 1.8;
+}
+
+.contact-card__text a {
+  color: inherit;
+}
+
+.contact-card__text a:hover {
+  color: var(--color-green);
+}
+
+/* ======================================================
+   Map
+====================================================== */
+
+.contact-map {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+  background-color: var(--color-cream-light);
+}
+
+.contact-map__iframe {
+  display: block;
+  width: 100%;
+  height: 520px;
+  border: 0;
+  filter: saturate(0.72) contrast(0.92) brightness(1.08);
+}
+
+.contact-map__overlay-wrapper {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.contact-map__card {
+  display: grid;
+  width: min(100%, 440px);
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 24px;
+  padding: 38px 42px;
+  background-color: rgba(255, 255, 255, 0.96);
+  box-shadow: var(--shadow-card);
+  pointer-events: auto;
+}
+
+.contact-map__icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  color: var(--color-gold-dark);
+}
+
+.contact-map__icon svg {
+  width: 31px;
+  height: 31px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.3;
+}
+
+.contact-map__title {
+  color: var(--color-gold-dark);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.contact-map__text {
+  margin-top: 18px;
+  color: var(--color-text);
+  font-size: 0.7rem;
+  line-height: 1.8;
+}
+
+.contact-map__link {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--color-green);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-transform: uppercase;
+}
+
+.contact-map__link:hover {
+  color: var(--color-gold-dark);
+}
+
+/* ======================================================
+   Interior image
+====================================================== */
+
+.contact-interior {
+  height: min(58vw, 760px);
+  min-height: 460px;
+  border-block: 18px solid var(--color-white);
+}
+
+.contact-interior img {
+  object-position: center center;
+}
+
+/* ======================================================
+   Tablet
+====================================================== */
+
+@media (max-width: 1023px) {
+  .contact-hero,
+  .contact-hero__inner {
+    min-height: 560px;
+  }
+
+  .contact-hero__overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0.96) 38%,
+        rgba(255, 255, 255, 0.58) 62%,
+        rgba(255, 255, 255, 0) 84%
+      );
+  }
+
+  .contact-details {
+    padding-block: 84px 96px;
+  }
+
+  .contact-details__grid {
+    gap: 40px;
+  }
+
+  .contact-map__card {
+    width: min(100%, 390px);
+    padding: 32px 34px;
+  }
+
+  .contact-interior {
+    height: 64vw;
+  }
+}
+
+/* ======================================================
+   Mobile
+====================================================== */
+
+@media (max-width: 767px) {
+  .contact-hero {
+    display: flex;
+    min-height: auto;
+    flex-direction: column;
+    background-color: var(--color-white);
+  }
+
+  .contact-hero__media {
+    position: relative;
+    height: 350px;
+  }
+
+  .contact-hero__image {
+    object-position: 66% center;
+  }
+
+  .contact-hero__overlay {
+    display: none;
+  }
+
+  .contact-hero__inner {
+    min-height: auto;
+  }
+
+  .contact-hero__content {
+    width: 100%;
+    padding-block: 66px 74px;
+  }
+
+  .contact-hero__title {
+    font-size: 1.5rem;
+  }
+
+  .contact-hero__text {
+    max-width: 100%;
+    font-size: 0.73rem;
+  }
+
+  .contact-details {
+    padding-block: 72px 78px;
+  }
+
+  .contact-details__grid {
+    grid-template-columns: 1fr;
+    gap: 46px;
+    margin-top: 48px;
+  }
+
+  .contact-card {
+    gap: 20px;
+  }
+
+  .contact-card__text {
+    font-size: 0.72rem;
+  }
+
+  .contact-map {
+    min-height: auto;
+    padding-bottom: 0;
+  }
+
+  .contact-map__iframe {
+    height: 420px;
+  }
+
+  .contact-map__overlay-wrapper {
+    position: relative;
+    display: block;
+    padding-block: 0;
+  }
+
+  .contact-map__card {
+    width: 100%;
+    max-width: none;
+    grid-template-columns: auto minmax(0, 1fr);
+    padding: 32px 24px;
+    box-shadow: none;
+  }
+
+  .contact-interior {
+    height: 82vw;
+    min-height: 350px;
+    border-block-width: 12px;
+  }
+
+  .contact-interior img {
+    object-position: 56% center;
+  }
+}

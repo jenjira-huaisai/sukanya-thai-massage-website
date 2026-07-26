@@ -1,0 +1,342 @@
+/* =========================================================
+   Sukanya Oosterse Massage Techniek
+   Treatments Page
+========================================================= */
+
+/* ======================================================
+   Hero
+====================================================== */
+
+.treatments-hero {
+  position: relative;
+  min-height: 610px;
+  overflow: hidden;
+  background-color: var(--color-cream-light);
+}
+
+.treatments-hero__media {
+  position: absolute;
+  inset: 0;
+}
+
+.treatments-hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.treatments-hero__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 610px;
+  align-items: center;
+}
+
+.treatments-hero__content {
+  width: min(100%, 460px);
+  padding: 56px 48px 56px 0;
+}
+
+.treatments-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.99) 0%,
+      rgba(255, 255, 255, 0.96) 29%,
+      rgba(255, 255, 255, 0.72) 46%,
+      rgba(255, 255, 255, 0) 66%
+    );
+}
+
+.treatments-hero__title {
+  color: var(--color-green);
+  font-family: var(--font-body);
+  font-size: clamp(1.55rem, 2.2vw, 2.05rem);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.treatments-hero__text {
+  max-width: 390px;
+  margin-top: 28px;
+  color: var(--color-text);
+  font-size: 0.78rem;
+  line-height: 2;
+}
+
+/* ======================================================
+   Treatments list
+====================================================== */
+
+.treatments-list {
+  padding-block: 78px 92px;
+  background-color: var(--color-white);
+}
+
+.treatment-row {
+  display: grid;
+  grid-template-columns:
+    minmax(260px, 380px)
+    minmax(0, 1fr)
+    auto;
+  gap: 54px;
+  align-items: center;
+  padding-block: 24px;
+  border-bottom: 1px solid var(--color-border);
+  scroll-margin-top: calc(var(--header-height) + 24px);
+}
+
+.treatment-row:first-of-type {
+  padding-top: 0;
+}
+
+.treatment-row:last-of-type {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.treatment-row__image {
+  aspect-ratio: 1.55 / 1;
+  overflow: hidden;
+}
+
+.treatment-row__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 450ms ease;
+}
+
+.treatment-row:hover .treatment-row__image img {
+  transform: scale(1.025);
+}
+
+.treatment-row__content {
+  min-width: 0;
+}
+
+.treatment-row__title {
+  color: var(--color-green);
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.treatment-row__description {
+  max-width: 530px;
+  margin-top: 12px;
+  color: var(--color-text);
+  font-size: 0.73rem;
+  line-height: 1.95;
+}
+
+.treatment-row__meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 34px;
+  color: var(--color-text-dark);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.treatment-row__meta svg {
+  width: 17px;
+  height: 17px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.3;
+}
+
+.treatment-row__link {
+  display: grid;
+  width: 92px;
+  height: 38px;
+  place-items: center;
+  border-radius: var(--radius-small);
+  background-color: var(--color-cream-light);
+  color: var(--color-gold-dark);
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.treatment-row__link:hover {
+  background-color: var(--color-gold-dark);
+  color: var(--color-white);
+  transform: translateX(4px);
+}
+
+/* ======================================================
+   Interior image
+====================================================== */
+
+.treatments-interior {
+  height: min(56vw, 720px);
+  min-height: 430px;
+  border-bottom: 20px solid var(--color-white);
+}
+
+.treatments-interior img {
+  object-position: center 52%;
+}
+
+/* ======================================================
+   Large desktop
+====================================================== */
+
+@media (min-width: 1280px) {
+  .treatments-hero__content::before {
+    width: 54%;
+  }
+
+  .treatment-row {
+    grid-template-columns:
+      minmax(300px, 380px)
+      minmax(0, 1fr)
+      92px;
+  }
+}
+
+/* ======================================================
+   Tablet
+====================================================== */
+
+@media (max-width: 1023px) {
+  .treatments-hero,
+  .treatments-hero__inner {
+    min-height: 560px;
+  }
+
+  .treatments-hero__content {
+    width: min(100%, 420px);
+  }
+
+  .treatments-hero__content::before {
+    width: 68%;
+  }
+
+  .treatment-row {
+    grid-template-columns:
+      minmax(220px, 300px)
+      minmax(0, 1fr)
+      auto;
+    gap: 34px;
+  }
+
+  .treatment-row__link {
+    width: 72px;
+  }
+
+  .treatments-interior {
+    height: 62vw;
+  }
+}
+
+/* ======================================================
+   Mobile
+====================================================== */
+
+@media (max-width: 767px) {
+  .treatments-hero {
+    display: flex;
+    min-height: auto;
+    flex-direction: column;
+    background-color: var(--color-white);
+  }
+
+  .treatments-hero__media {
+    position: relative;
+    height: 340px;
+  }
+
+  .treatments-hero__image {
+    object-position: 62% center;
+  }
+
+  .treatments-hero__inner {
+    min-height: auto;
+    align-items: flex-start;
+  }
+
+  .treatments-hero__content {
+    width: 100%;
+    padding: 66px 0 72px;
+  }
+
+  .treatments-hero__content::before {
+    display: none;
+  }
+
+  .treatments-hero__title {
+    font-size: 1.55rem;
+  }
+
+  .treatments-hero__text {
+    max-width: 100%;
+    font-size: 0.73rem;
+  }
+
+  .treatments-list {
+    padding-block: 60px 72px;
+  }
+
+  .treatment-row {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding-block: 34px;
+  }
+
+  .treatment-row:first-of-type {
+    padding-top: 0;
+  }
+
+  .treatment-row__image {
+    width: 100%;
+    aspect-ratio: 1.45 / 1;
+  }
+
+  .treatment-row__content {
+    padding-right: 0;
+  }
+
+  .treatment-row__title {
+    font-size: 0.95rem;
+  }
+
+  .treatment-row__description {
+    font-size: 0.72rem;
+  }
+
+  .treatment-row__meta {
+    margin-top: 24px;
+  }
+
+  .treatment-row__link {
+    width: 100%;
+    height: 44px;
+    justify-self: stretch;
+  }
+
+  .treatment-row__link:hover {
+    transform: none;
+  }
+
+  .treatments-interior {
+    height: 78vw;
+    min-height: 340px;
+    border-bottom-width: 12px;
+  }
+
+  .treatments-interior img {
+    object-position: 58% center;
+  }
+}

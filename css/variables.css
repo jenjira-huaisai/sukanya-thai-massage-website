@@ -1,305 +1,66 @@
-/* =========================================================
-   Sukanya Thai Massage
-   Global Design Tokens
-   Based on the approved Figma designs
-========================================================= */
-
 :root {
-  /* ======================================================
-     Brand Colors
-  ====================================================== */
-
-  --color-white: #ffffff;
-  --color-black: #1f1f1f;
-
-  --color-gold: #8b7845;
-  --color-gold-dark: #6f6037;
-  --color-gold-light: #b7a98a;
-
-  --color-green: #84956f;
-  --color-green-dark: #6e7f5d;
-  --color-green-light: #a8b59a;
-
-  --color-cream: #f5f0e5;
-  --color-cream-light: #faf8f3;
-  --color-beige: #e8dfcf;
-
-  --color-brown: #b39f83;
-  --color-brown-dark: #927d61;
-
-  --color-text: #4a443b;
-  --color-text-dark: #2f2b26;
-  --color-text-muted: #786f63;
-  --color-text-light: #9b9388;
-
-  --color-surface: #f7f7f7;
-  --color-surface-warm: #f3eee4;
-
-  --color-border: #e5ded2;
-  --color-border-dark: #cfc5b4;
-
-  --color-overlay-light: rgba(255, 255, 255, 0.88);
-  --color-overlay-soft: rgba(255, 255, 255, 0.68);
-  --color-overlay-dark: rgba(31, 31, 31, 0.42);
 
   /* ======================================================
-     Semantic Colors
-  ====================================================== */
+   Colors
+====================================================== */
 
-  --color-background: var(--color-white);
-  --color-background-alt: var(--color-cream);
-  --color-background-soft: var(--color-cream-light);
+--color-white: #ffffff;
+--color-cream: #f4f0e6;
+--color-cream-light: #f8f5ed;
 
-  --color-heading: var(--color-green);
-  --color-body: var(--color-text);
-  --color-caption: var(--color-text-muted);
+--color-gold: #8b7a43;
+--color-gold-dark: #716232;
+--color-footer-bottom: #716232;
 
-  --color-link: var(--color-gold);
-  --color-link-hover: var(--color-gold-dark);
+--color-green: #7e9362;
 
-  --color-button-primary: var(--color-gold);
-  --color-button-primary-hover: var(--color-gold-dark);
-  --color-button-primary-text: var(--color-white);
+--color-text: #786f5d;
+--color-text-dark: #5f584b;
 
-  --color-button-secondary: transparent;
-  --color-button-secondary-hover: var(--color-cream);
-  --color-button-secondary-text: var(--color-gold);
 
   /* ======================================================
      Typography
   ====================================================== */
 
-  --font-heading: "Cormorant Garamond", Georgia, serif;
-  --font-body: "Poppins", Arial, sans-serif;
-  --font-accent: "Cormorant Garamond", Georgia, serif;
-
-  --font-size-xs: 0.75rem;
-  --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-md: 1.125rem;
-  --font-size-lg: 1.25rem;
-  --font-size-xl: 1.5rem;
-  --font-size-2xl: 2rem;
-  --font-size-3xl: 2.75rem;
-  --font-size-4xl: 3.75rem;
-  --font-size-5xl: 5rem;
-
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-
-  --line-height-tight: 1.1;
-  --line-height-heading: 1.2;
-  --line-height-body: 1.75;
-  --line-height-relaxed: 1.9;
-
-  --letter-spacing-tight: -0.02em;
-  --letter-spacing-normal: 0;
-  --letter-spacing-wide: 0.08em;
-  --letter-spacing-wider: 0.14em;
-  --letter-spacing-uppercase: 0.12em;
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Inter", sans-serif;
 
   /* ======================================================
-     Spacing Scale
+     Containers
   ====================================================== */
 
-  --space-0: 0;
-  --space-1: 0.25rem;
-  --space-2: 0.5rem;
-  --space-3: 0.75rem;
-  --space-4: 1rem;
-  --space-5: 1.25rem;
-  --space-6: 1.5rem;
-  --space-8: 2rem;
-  --space-10: 2.5rem;
-  --space-12: 3rem;
-  --space-14: 3.5rem;
-  --space-16: 4rem;
-  --space-20: 5rem;
-  --space-24: 6rem;
-  --space-28: 7rem;
-  --space-32: 8rem;
+  --container-width: 1180px;
+  --container-narrow: 680px;
 
-  --section-spacing-mobile: 4rem;
-  --section-spacing-tablet: 5rem;
-  --section-spacing-desktop: 7rem;
+  /* NEW */
+  --content-width: 1180px;
+  --content-narrow: 980px;
+  --content-reading: 860px;
 
   /* ======================================================
-     Layout
+     Page Padding
   ====================================================== */
 
-  --container-xs: 40rem;
-  --container-sm: 48rem;
-  --container-md: 64rem;
-  --container-lg: 75rem;
-  --container-xl: 87.5rem;
-
-  --container-width: 75rem;
-  --container-padding-mobile: 1.25rem;
-  --container-padding-tablet: 2rem;
-  --container-padding-desktop: 3rem;
-
-  --header-height-mobile: 5rem;
-  --header-height-desktop: 7rem;
-
-  --content-width-narrow: 38rem;
-  --content-width-medium: 52rem;
-  --content-width-wide: 68rem;
+  /* NEW */
+  --page-padding-desktop: 90px;
+  --page-padding-tablet: 48px;
+  --page-padding-mobile: 24px;
 
   /* ======================================================
-     Grid
+     Header
   ====================================================== */
 
-  --grid-gap-sm: 1rem;
-  --grid-gap-md: 2rem;
-  --grid-gap-lg: 3rem;
-  --grid-gap-xl: 4rem;
+  --header-height: 126px;
 
   /* ======================================================
-     Borders
+     Spacing
   ====================================================== */
 
-  --border-width-thin: 1px;
-  --border-width-medium: 2px;
-
-  --border-default: var(--border-width-thin) solid var(--color-border);
-  --border-dark: var(--border-width-thin) solid var(--color-border-dark);
-  --border-gold: var(--border-width-thin) solid var(--color-gold);
-
-  /* ======================================================
-     Border Radius
-  ====================================================== */
-
-  --radius-none: 0;
-  --radius-xs: 0.125rem;
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-  --radius-xl: 1rem;
-  --radius-pill: 999px;
-  --radius-circle: 50%;
-
-  /* ======================================================
-     Shadows
-  ====================================================== */
-
-  --shadow-none: none;
-  --shadow-soft: 0 0.5rem 2rem rgba(47, 43, 38, 0.06);
-  --shadow-card: 0 0.75rem 2.5rem rgba(47, 43, 38, 0.08);
-  --shadow-header: 0 0.25rem 1.5rem rgba(47, 43, 38, 0.05);
-  --shadow-image: 0 1rem 3rem rgba(47, 43, 38, 0.1);
-
-  /* ======================================================
-     Transitions
-  ====================================================== */
-
-  --transition-fast: 150ms ease;
-  --transition-base: 250ms ease;
-  --transition-slow: 400ms ease;
-
-  --transition-color:
-    color var(--transition-base),
-    background-color var(--transition-base),
-    border-color var(--transition-base);
-
-  --transition-transform:
-    transform var(--transition-base);
-
-  --transition-opacity:
-    opacity var(--transition-base);
-
-  /* ======================================================
-     Buttons
-  ====================================================== */
-
-  --button-height-sm: 2.5rem;
-  --button-height-md: 3rem;
-  --button-height-lg: 3.5rem;
-
-  --button-padding-sm: 0 1.25rem;
-  --button-padding-md: 0 1.75rem;
-  --button-padding-lg: 0 2.25rem;
-
-  --button-font-size: 0.75rem;
-  --button-font-weight: var(--font-weight-semibold);
-  --button-letter-spacing: var(--letter-spacing-wide);
-  --button-radius: var(--radius-sm);
-
-  /* ======================================================
-     Forms
-  ====================================================== */
-
-  --input-height: 3.25rem;
-  --input-padding: 0 1rem;
-  --input-background: var(--color-white);
-  --input-border: var(--border-default);
-  --input-border-focus: var(--border-gold);
-  --input-radius: var(--radius-sm);
-  --input-placeholder: var(--color-text-light);
-
-  /* ======================================================
-     Icons
-  ====================================================== */
-
-  --icon-size-sm: 1rem;
-  --icon-size-md: 1.5rem;
-  --icon-size-lg: 2rem;
-  --icon-stroke-width: 1.5;
-
-  /* ======================================================
-     Decorative Elements
-  ====================================================== */
-
-  --divider-width: 3.5rem;
-  --divider-height: 1px;
-  --divider-color: var(--color-gold);
-
-  --section-label-size: 0.75rem;
-  --section-label-weight: var(--font-weight-semibold);
-  --section-label-spacing: var(--letter-spacing-uppercase);
-
-  /* ======================================================
-     Images
-  ====================================================== */
-
-  --image-overlay-light:
-    linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.98) 0%,
-      rgba(255, 255, 255, 0.88) 35%,
-      rgba(255, 255, 255, 0.15) 68%,
-      rgba(255, 255, 255, 0) 100%
-    );
-
-  --image-overlay-bottom:
-    linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0) 55%,
-      rgba(255, 255, 255, 0.92) 100%
-    );
-
-  /* ======================================================
-     Z-index
-  ====================================================== */
-
-  --z-base: 1;
-  --z-content: 10;
-  --z-header: 100;
-  --z-dropdown: 200;
-  --z-overlay: 300;
-  --z-menu: 400;
-  --z-modal: 500;
-
-  /* ======================================================
-     Breakpoint References
-     CSS variables cannot be used directly in media queries.
-     These values are documented for consistency.
-  ====================================================== */
-
-  --breakpoint-sm: 36rem;
-  --breakpoint-md: 48rem;
-  --breakpoint-lg: 64rem;
-  --breakpoint-xl: 80rem;
-  --breakpoint-2xl: 90rem;
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 64px;
+  --space-2xl: 88px;
+  --space-3xl: 120px;
 }

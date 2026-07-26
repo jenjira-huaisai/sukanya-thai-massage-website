@@ -1,48 +1,19 @@
 /* =========================================================
-   Sukanya Thai Massage
-   Global Layout System
+   Sukanya Oosterse Massage Techniek
+   Shared Layout
 ========================================================= */
-
-/* ======================================================
-   Main Page Structure
-====================================================== */
-
-.site {
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-main {
-  display: block;
-}
 
 /* ======================================================
    Containers
 ====================================================== */
 
 .container {
-  width: min(
-    calc(100% - (var(--container-padding-mobile) * 2)),
-    var(--container-width)
-  );
+  width: min(calc(100% - 40px), var(--container-width));
   margin-inline: auto;
 }
 
 .container--narrow {
-  max-width: var(--content-width-narrow);
-}
-
-.container--medium {
-  max-width: var(--content-width-medium);
-}
-
-.container--wide {
-  max-width: var(--content-width-wide);
-}
-
-.container--full {
-  width: 100%;
-  max-width: none;
+  width: min(calc(100% - 40px), var(--container-narrow));
 }
 
 /* ======================================================
@@ -50,340 +21,201 @@ main {
 ====================================================== */
 
 .section {
-  padding-block: var(--section-spacing-mobile);
-}
-
-.section--small {
-  padding-block: var(--space-16);
-}
-
-.section--large {
-  padding-block: var(--space-24);
-}
-
-.section--white {
-  background-color: var(--color-white);
+  width: 100%;
+  padding-block: var(--space-2xl);
 }
 
 .section--cream {
   background-color: var(--color-cream);
 }
 
-.section--soft {
+.section--cream-light {
   background-color: var(--color-cream-light);
 }
 
-.section--surface {
-  background-color: var(--color-surface);
+.section--white {
+  background-color: var(--color-white);
 }
 
 /* ======================================================
-   Content Alignment
+   Section headings
 ====================================================== */
 
-.content-center {
-  margin-inline: auto;
+.section-heading {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
-.content-left {
-  text-align: left;
+.section-label {
+  color: var(--color-gold-dark);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  text-transform: uppercase;
 }
 
-.content-right {
-  text-align: right;
+.section-divider {
+  display: block;
+  width: 52px;
+  height: 1px;
+  margin-block: 28px;
+  background-color: var(--color-gold);
 }
 
-/* ======================================================
-   Stack Layout
-====================================================== */
+.section-description {
+  max-width: 620px;
+  margin-inline: auto;
+  color: var(--color-text);
+  font-size: 0.75rem;
+  line-height: 1.8;
+  text-align: center;
+}
 
-.stack {
+.section-action {
   display: flex;
-  flex-direction: column;
-}
-
-.stack--xs {
-  gap: var(--space-2);
-}
-
-.stack--sm {
-  gap: var(--space-4);
-}
-
-.stack--md {
-  gap: var(--space-6);
-}
-
-.stack--lg {
-  gap: var(--space-10);
-}
-
-.stack--xl {
-  gap: var(--space-16);
-}
-
-/* ======================================================
-   Flex Layout
-====================================================== */
-
-.cluster {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.cluster--start {
-  justify-content: flex-start;
-}
-
-.cluster--center {
   justify-content: center;
-}
-
-.cluster--between {
-  justify-content: space-between;
-}
-
-.cluster--end {
-  justify-content: flex-end;
-}
-
-.cluster--sm {
-  gap: var(--space-3);
-}
-
-.cluster--md {
-  gap: var(--space-6);
-}
-
-.cluster--lg {
-  gap: var(--space-10);
+  margin-top: 64px;
 }
 
 /* ======================================================
-   Grid Layout
+   Grids
 ====================================================== */
 
-.grid {
+.card-grid {
   display: grid;
-  gap: var(--grid-gap-md);
+  width: 100%;
+  gap: 24px;
 }
 
-.grid--2 {
-  grid-template-columns: 1fr;
+.card-grid--four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.grid--3 {
-  grid-template-columns: 1fr;
+.card-grid--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.grid--4 {
-  grid-template-columns: 1fr;
-}
-
-.grid--auto {
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(min(100%, 15rem), 1fr)
-  );
+.card-grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 /* ======================================================
-   Split Layout
+   Values grid
 ====================================================== */
 
-.split {
+.values-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  gap: var(--space-12);
-}
-
-.split--top {
-  align-items: start;
-}
-
-.split--reverse .split__media {
-  order: -1;
-}
-
-.split__content,
-.split__media {
-  min-width: 0;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 60px;
 }
 
 /* ======================================================
-   Media Blocks
+   Full-width images
 ====================================================== */
 
-.media-cover {
+.full-width-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.full-width-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.media-contain {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.full-bleed {
-  width: 100%;
-}
-
-.aspect-landscape {
-  aspect-ratio: 16 / 9;
-}
-
-.aspect-wide {
-  aspect-ratio: 21 / 9;
-}
-
-.aspect-square {
-  aspect-ratio: 1 / 1;
-}
-
-.aspect-portrait {
-  aspect-ratio: 4 / 5;
-}
-
 /* ======================================================
-   Section Headings
+   Shared two-column layouts
 ====================================================== */
 
-.section-heading {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-}
-
-.section-heading--center {
+.split-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 64px;
   align-items: center;
-  text-align: center;
 }
 
-.section-heading--left {
-  align-items: flex-start;
-  text-align: left;
+.split-layout--reverse > :first-child {
+  order: 2;
 }
 
-.section-heading__label {
-  color: var(--color-gold);
-  font-size: var(--section-label-size);
-  font-weight: var(--section-label-weight);
-  letter-spacing: var(--section-label-spacing);
-  line-height: 1.4;
-  text-transform: uppercase;
-}
-
-.section-heading__title {
-  max-width: 18ch;
-}
-
-.section-heading__text {
-  max-width: 58ch;
-  color: var(--color-text-muted);
-}
-
-.section-divider {
-  width: var(--divider-width);
-  height: var(--divider-height);
-  border: 0;
-  background-color: var(--divider-color);
-}
-
-/* ======================================================
-   Visually Hidden Content
-====================================================== */
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
-  border: 0;
+.split-layout--reverse > :last-child {
+  order: 1;
 }
 
 /* ======================================================
    Tablet
 ====================================================== */
 
-@media (min-width: 48rem) {
+@media (max-width: 1023px) {
   .container {
-    width: min(
-      calc(100% - (var(--container-padding-tablet) * 2)),
-      var(--container-width)
-    );
+    width: min(calc(100% - 40px), var(--container-width));
   }
 
-  .section {
-    padding-block: var(--section-spacing-tablet);
-  }
-
-  .section--large {
-    padding-block: var(--space-28);
-  }
-
-  .grid--2 {
+  .card-grid--four,
+  .card-grid--three {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .grid--3 {
+  .values-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 60px 40px;
   }
 
-  .grid--4 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .split {
-    gap: var(--space-16);
+  .split-layout {
+    gap: 40px;
   }
 }
 
 /* ======================================================
-   Desktop
+   Mobile
 ====================================================== */
 
-@media (min-width: 64rem) {
-  .container {
-    width: min(
-      calc(100% - (var(--container-padding-desktop) * 2)),
-      var(--container-width)
-    );
+@media (max-width: 767px) {
+  .container,
+  .container--narrow {
+    width: min(calc(100% - 32px), var(--container-width));
   }
 
   .section {
-    padding-block: var(--section-spacing-desktop);
+    padding-block: 72px;
   }
 
-  .section--large {
-    padding-block: var(--space-32);
+  .section-divider {
+    margin-block: 24px;
   }
 
-  .grid--3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .section-description {
+    font-size: 0.72rem;
   }
 
-  .grid--4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+  .section-action {
+    margin-top: 48px;
   }
 
-  .split {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--space-20);
+  .card-grid--four,
+  .card-grid--three,
+  .card-grid--two,
+  .values-grid,
+  .split-layout {
+    grid-template-columns: 1fr;
   }
 
-  .split--reverse .split__content {
-    order: 2;
+  .card-grid {
+    gap: 22px;
   }
 
-  .split--reverse .split__media {
-    order: 1;
+  .values-grid {
+    gap: 54px;
+  }
+
+  .split-layout--reverse > :first-child,
+  .split-layout--reverse > :last-child {
+    order: initial;
   }
 }

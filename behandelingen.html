@@ -1,110 +1,381 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
+
 <head>
   <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta
-    name="description"
-    content="Ontdek de authentieke Thaise massagebehandelingen van Sukanya Oosterse Massage Techniek in Schoonebeek."
-  >
+  <title>
+    Behandelingen | Sukanya Oosterse Massage Techniek
+  </title>
 
-  <title>Behandelingen | Sukanya Oosterse Massage Techniek</title>
+  <meta name="description"
+    content="Bekijk de authentieke Thaise massagebehandelingen van Sukanya Oosterse Massage Techniek, waaronder traditionele Thaise massage, aromamassage, voetreflexmassage en hoofd-, nek- en schoudermassage.">
 
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="canonical" href="https://www.sukanyathaimassage.com/behandelingen.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Behandelingen | Sukanya Oosterse Massage Techniek">
+
+  <meta property="og:description"
+    content="Ontdek onze authentieke Thaise massagebehandelingen voor rust, balans en ontspanning.">
+
+  <meta property="og:type" content="website">
+
+  <meta property="og:url" content="https://www.sukanyathaimassage.com/behandelingen.html">
+
+  <meta property="og:image" content="https://www.sukanyathaimassage.com/images/social/sukanya-social-preview.jpg">
+
+  <meta property="og:locale" content="nl_NL">
+
+  <!-- Favicons -->
+  <link rel="icon" href="images/favicon/favicon.svg" type="image/svg+xml">
+
+  <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32" type="image/png">
+
+  <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="images/behandelingen/behandelingen-hero.webp" fetchpriority="high">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/behandelingen.css">
+  <link rel="stylesheet" href="css/pages/behandelingen.css">
   <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Sukanya Oosterse Massage Techniek",
+        "url": "https://www.sukanyathaimassage.com/",
+        "image": "https://www.sukanyathaimassage.com/images/social/sukanya-social-preview.jpg",
+        "description": "Professionele authentieke Thaise massagetechnieken met persoonlijke aandacht, rust en ontspanning.",
+        "priceRange": "€€",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Julianalaan 8",
+          "postalCode": "7761 XV",
+          "addressLocality": "Schoonebeek",
+          "addressCountry": "NL"
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Schoonebeek en omgeving"
+        }
+      }
+    </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">
+    Ga naar de hoofdinhoud
+  </a>
+
   <div class="site">
+    <!-- Header -->
 
-    <!-- ==================================================
-         Header
-    =================================================== -->
-
-    <header class="treatments-header" data-header>
-      <div class="treatments-header__inner">
-
-        <button
-          class="treatments-menu-button"
-          type="button"
-          aria-label="Menu openen"
-          aria-expanded="false"
-          aria-controls="primary-navigation"
-          data-menu-toggle
-        >
-          <span></span>
-          <span></span>
-          <span></span>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <button class="menu-button" type="button" aria-label="Menu openen" aria-expanded="false"
+          aria-controls="site-navigation">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
         </button>
 
-        <a
-          class="treatments-header__logo"
-          href="index.html"
-          aria-label="Sukanya Oosterse Massage Techniek home"
-        >
-          <img
-            src="images/logo/sukanya-logo-gold.png"
-            alt="Sukanya Oosterse Massage Techniek"
-          >
+        <a class="site-logo" href="index.html" aria-label="Sukanya Oosterse Massage Techniek – Home">
+          <img src="images/logo/sukanya-logo.svg" alt="Sukanya Oosterse Massage Techniek" width="300" height="120">
         </a>
 
-        <a
-          class="treatments-header__appointment"
-          href="contact.html"
-        >
+        <a class="button button--appointment" href="contact.html">
           <span>Afspraak maken</span>
 
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            aria-hidden="true"
-          >
-            <path
-              d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.7A8.5 8.5 0 1 1 20.5 11.5Z"
-            />
-            <path
-              d="M8.2 8.1c.3 2.8 2.5 5 5.3 5.3"
-            />
+          <svg class="button__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none">
+            <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4"></path>
+            <path d="M3 20l1.6-4.5A8.5 8.5 0 1 1 21 11.5"></path>
+            <path d="M8.5 8.5c.4 2.4 2.3 4.3 4.7 4.8"></path>
           </svg>
         </a>
       </div>
+    </header>
 
-      <nav
-        class="treatments-navigation"
-        id="primary-navigation"
-        aria-label="Hoofdnavigatie"
-        data-navigation
-      >
-        <div class="treatments-navigation__inner">
-          <ul>
+    <!-- Navigation -->
+
+    <nav class="site-navigation" id="site-navigation" aria-label="Hoofdnavigatie">
+      <div class="site-navigation__inner">
+        <ul class="site-navigation__list">
+          <li>
+            <a class="site-navigation__link" href="index.html">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a class="site-navigation__link is-active" href="behandelingen.html" aria-current="page">
+              Behandelingen
+            </a>
+          </li>
+
+          <li>
+            <a class="site-navigation__link" href="tarieven.html">
+              Tarieven
+            </a>
+          </li>
+
+          <li>
+            <a class="site-navigation__link" href="over-sukanya.html">
+              Over Sukanya
+            </a>
+          </li>
+
+          <li>
+            <a class="site-navigation__link" href="contact.html">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+
+    <main id="main-content">
+      <!-- Hero -->
+
+      <section class="treatments-hero" aria-labelledby="treatments-hero-title">
+        <picture class="treatments-hero__media">
+          <source media="(max-width: 767px)" srcset="images/behandelingen/behandelingen-hero-mobile.webp">
+
+          <img class="treatments-hero__image" src="images/behandelingen/behandelingen-hero.webp"
+            alt="Rustige en warme behandelruimte van Sukanya" width="1920" height="1080" fetchpriority="high">
+        </picture>
+
+        <div class="treatments-hero__overlay" aria-hidden="true"></div>
+
+        <div class="container treatments-hero__inner">
+          <div class="treatments-hero__content">
+            <p class="section-label">
+              Behandelingen
+            </p>
+
+            <span class="section-divider" aria-hidden="true"></span>
+
+            <h1 class="treatments-hero__title" id="treatments-hero-title">
+              Authentieke Thaise<br>
+              massagebehandelingen
+            </h1>
+
+            <p class="treatments-hero__text">
+              Elke behandeling is met zorg samengesteld om lichaam
+              en geest in balans te brengen en diepe ontspanning
+              te bevorderen.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Treatments list -->
+
+      <section class="treatments-list" aria-labelledby="treatments-list-title">
+        <div class="container">
+          <h2 class="visually-hidden" id="treatments-list-title">
+            Overzicht van onze massagebehandelingen
+          </h2>
+
+          <!-- Traditional Thai massage -->
+
+          <article class="treatment-row" id="traditionele-thaise-massage">
+            <figure class="treatment-row__image">
+              <img src="images/treatments/traditional-thai-massage.webp" alt="Traditionele Thaise massage" width="800"
+                height="520" loading="lazy" decoding="async">
+            </figure>
+
+            <div class="treatment-row__content">
+              <h3 class="treatment-row__title">
+                Traditionele Thaise massage
+              </h3>
+
+              <p class="treatment-row__description">
+                Een combinatie van diepe druk en stretching voor
+                meer flexibiliteit en minder spierspanning.
+              </p>
+
+              <div class="treatment-row__meta">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="8"></circle>
+                  <path d="M12 7v5l3 2"></path>
+                </svg>
+
+                <span>30 / 60 / 90 / 120 min</span>
+              </div>
+            </div>
+
+            <a class="treatment-row__link" href="tarieven.html#traditionele-thaise-massage"
+              aria-label="Bekijk tarieven voor traditionele Thaise massage">
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- Thai oil and aroma massage -->
+
+          <article class="treatment-row" id="thaise-olie-aromamassage">
+            <figure class="treatment-row__image">
+              <img src="images/treatments/thai-oil-aroma-massage.webp" alt="Thaise olie- en aromamassage" width="800"
+                height="520" loading="lazy" decoding="async">
+            </figure>
+
+            <div class="treatment-row__content">
+              <h3 class="treatment-row__title">
+                Thaise olie- / aromamassage
+              </h3>
+
+              <p class="treatment-row__description">
+                Ontspannende massage met warme olie voor lichaam
+                en geest.
+              </p>
+
+              <div class="treatment-row__meta">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="8"></circle>
+                  <path d="M12 7v5l3 2"></path>
+                </svg>
+
+                <span>60 / 90 / 120 min</span>
+              </div>
+            </div>
+
+            <a class="treatment-row__link" href="tarieven.html#thaise-olie-aromamassage"
+              aria-label="Bekijk tarieven voor Thaise olie- en aromamassage">
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- Foot reflex massage -->
+
+          <article class="treatment-row" id="voetreflexmassage">
+            <figure class="treatment-row__image">
+              <img src="images/treatments/foot-reflex-massage.webp" alt="Thaise voetreflexmassage" width="800"
+                height="520" loading="lazy" decoding="async">
+            </figure>
+
+            <div class="treatment-row__content">
+              <h3 class="treatment-row__title">
+                Thaise voetreflexmassage
+              </h3>
+
+              <p class="treatment-row__description">
+                Stimuleert de drukpunten in de voeten en ondersteunt
+                de balans in het lichaam.
+              </p>
+
+              <div class="treatment-row__meta">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="8"></circle>
+                  <path d="M12 7v5l3 2"></path>
+                </svg>
+
+                <span>60 min</span>
+              </div>
+            </div>
+
+            <a class="treatment-row__link" href="tarieven.html#voetreflexmassage"
+              aria-label="Bekijk tarieven voor Thaise voetreflexmassage">
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- Head neck shoulder massage -->
+
+          <article class="treatment-row" id="hoofd-nek-schoudermassage">
+            <figure class="treatment-row__image">
+              <img src="images/treatments/head-neck-shoulder-massage.webp" alt="Hoofd-, nek- en schoudermassage"
+                width="800" height="520" loading="lazy" decoding="async">
+            </figure>
+
+            <div class="treatment-row__content">
+              <h3 class="treatment-row__title">
+                Hoofd-, nek- en schoudermassage
+              </h3>
+
+              <p class="treatment-row__description">
+                Verlicht spanning in het hoofd, de nek en de schouders.
+                Ideaal bij stress of vermoeidheid.
+              </p>
+
+              <div class="treatment-row__meta">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="8"></circle>
+                  <path d="M12 7v5l3 2"></path>
+                </svg>
+
+                <span>30 / 60 min</span>
+              </div>
+            </div>
+
+            <a class="treatment-row__link" href="tarieven.html#hoofd-nek-schoudermassage"
+              aria-label="Bekijk tarieven voor hoofd-, nek- en schoudermassage">
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- Full-width interior image -->
+
+      <figure class="full-width-image treatments-interior">
+        <img src="images/behandelingen/massage-room-wide.webp"
+          alt="Warme behandelkamer met massagetafel, planten en zachte verlichting" width="1920" height="1000"
+          loading="lazy" decoding="async">
+      </figure>
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="site-footer">
+      <div class="container site-footer__main">
+        <div class="site-footer__brand">
+          <a href="index.html" aria-label="Sukanya Oosterse Massage Techniek – Home">
+            <img src="images/logo/sukanya-logo.svg" alt="Sukanya Oosterse Massage Techniek" width="320" height="128"
+              loading="lazy" decoding="async">
+          </a>
+        </div>
+
+        <nav class="site-footer__navigation" aria-label="Navigatie onderaan">
+          <h2 class="site-footer__title">
+            Navigatie
+          </h2>
+
+          <ul class="site-footer__links">
             <li>
-              <a href="index.html">
-                Home
-              </a>
+              <a href="index.html">Home</a>
             </li>
 
             <li>
-              <a
-                class="is-active"
-                href="behandelingen.html"
-              >
+              <a href="behandelingen.html">
                 Behandelingen
               </a>
             </li>
 
             <li>
-              <a href="tarieven.html">
-                Tarieven
-              </a>
+              <a href="tarieven.html">Tarieven</a>
             </li>
 
             <li>
@@ -114,345 +385,47 @@
             </li>
 
             <li>
-              <a href="contact.html">
-                Contact
-              </a>
+              <a href="contact.html">Contact</a>
             </li>
           </ul>
-        </div>
-      </nav>
-    </header>
+        </nav>
 
-    <main>
-
-      <!-- ==================================================
-           Hero
-      =================================================== -->
-
-      <section
-        class="treatments-hero"
-        aria-labelledby="treatments-hero-title"
-      >
-        <img
-          class="treatments-hero__image"
-          src="images/behandelingen/hero.jpg"
-          alt="Behandelruimte van Sukanya Oosterse Massage Techniek"
-        >
-
-        <div class="treatments-hero__overlay"></div>
-
-        <div class="treatments-page-container treatments-hero__inner">
-          <div class="treatments-hero__content">
-            <p class="treatments-section-label">
-              Behandelingen
-            </p>
-
-            <span
-              class="treatments-section-line"
-              aria-hidden="true"
-            ></span>
-
-            <h1 id="treatments-hero-title">
-              Authentieke Thaise<br>
-              massagebehandelingen
-            </h1>
-
-            <p>
-              Elke behandeling is met zorg samengesteld om lichaam
-              en geest in balans te brengen en diepe ontspanning
-              te bevorderen.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ==================================================
-           Treatment list
-      =================================================== -->
-
-      <section
-        class="treatments-list"
-        aria-label="Massagebehandelingen"
-      >
-        <div class="treatments-page-container">
-
-          <!-- Traditionele Thaise massage -->
-
-          <article
-            class="treatment-row"
-            id="traditionele-thaise-massage"
-          >
-            <div class="treatment-row__image">
-              <img
-                src="images/treatments/traditional-thai-massage.jpg"
-                alt="Traditionele Thaise massage"
-                loading="lazy"
-              >
-            </div>
-
-            <div class="treatment-row__content">
-              <h2>
-                Traditionele Thaise massage
-              </h2>
-
-              <p>
-                Een combinatie van diepe druk en stretching voor
-                meer flexibiliteit en minder spierspanning.
-              </p>
-
-              <div class="treatment-row__duration">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  aria-hidden="true"
-                >
-                  <circle cx="12" cy="12" r="8"></circle>
-                  <path d="M12 7v5l3 2"></path>
-                </svg>
-
-                <span>
-                  30 / 60 / 90 / 120 min
-                </span>
-              </div>
-            </div>
-
-            <a
-              class="treatment-row__button"
-              href="contact.html"
-              aria-label="Afspraak maken voor traditionele Thaise massage"
-            >
-              <span aria-hidden="true">→</span>
-            </a>
-          </article>
-
-          <!-- Thaise olie- en aromamassage -->
-
-          <article
-            class="treatment-row"
-            id="thaise-olie-aromamassage"
-          >
-            <div class="treatment-row__image">
-              <img
-                src="images/treatments/thai-oil-massage.jpg"
-                alt="Thaise olie- en aromamassage"
-                loading="lazy"
-              >
-            </div>
-
-            <div class="treatment-row__content">
-              <h2>
-                Thaise olie- / aromamassage
-              </h2>
-
-              <p>
-                Ontspannende massage met warme olie voor lichaam
-                en geest.
-              </p>
-
-              <div class="treatment-row__duration">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  aria-hidden="true"
-                >
-                  <circle cx="12" cy="12" r="8"></circle>
-                  <path d="M12 7v5l3 2"></path>
-                </svg>
-
-                <span>
-                  60 / 90 / 120 min
-                </span>
-              </div>
-            </div>
-
-            <a
-              class="treatment-row__button"
-              href="contact.html"
-              aria-label="Afspraak maken voor Thaise olie- en aromamassage"
-            >
-              <span aria-hidden="true">→</span>
-            </a>
-          </article>
-
-          <!-- Thaise voetreflexmassage -->
-
-          <article
-            class="treatment-row"
-            id="voetreflexmassage"
-          >
-            <div class="treatment-row__image">
-              <img
-                src="images/treatments/foot-reflex-massage.jpg"
-                alt="Thaise voetreflexmassage"
-                loading="lazy"
-              >
-            </div>
-
-            <div class="treatment-row__content">
-              <h2>
-                Thaise voetreflexmassage
-              </h2>
-
-              <p>
-                Stimuleert de drukpunten in de voeten en ondersteunt
-                de balans in het lichaam.
-              </p>
-
-              <div class="treatment-row__duration">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  aria-hidden="true"
-                >
-                  <circle cx="12" cy="12" r="8"></circle>
-                  <path d="M12 7v5l3 2"></path>
-                </svg>
-
-                <span>
-                  60 min
-                </span>
-              </div>
-            </div>
-
-            <a
-              class="treatment-row__button"
-              href="contact.html"
-              aria-label="Afspraak maken voor Thaise voetreflexmassage"
-            >
-              <span aria-hidden="true">→</span>
-            </a>
-          </article>
-
-          <!-- Hoofd-, nek- en schoudermassage -->
-
-          <article
-            class="treatment-row"
-            id="hoofd-nek-schoudermassage"
-          >
-            <div class="treatment-row__image">
-              <img
-                src="images/treatments/head-neck-shoulder-massage.jpg"
-                alt="Hoofd-, nek- en schoudermassage"
-                loading="lazy"
-              >
-            </div>
-
-            <div class="treatment-row__content">
-              <h2>
-                Hoofd-, nek- en schoudermassage
-              </h2>
-
-              <p>
-                Verlicht spanning in het hoofd, de nek en de
-                schouders. Ideaal bij stress of vermoeidheid.
-              </p>
-
-              <div class="treatment-row__duration">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  aria-hidden="true"
-                >
-                  <circle cx="12" cy="12" r="8"></circle>
-                  <path d="M12 7v5l3 2"></path>
-                </svg>
-
-                <span>
-                  30 / 60 min
-                </span>
-              </div>
-            </div>
-
-            <a
-              class="treatment-row__button"
-              href="contact.html"
-              aria-label="Afspraak maken voor hoofd-, nek- en schoudermassage"
-            >
-              <span aria-hidden="true">→</span>
-            </a>
-          </article>
-        </div>
-      </section>
-
-      <!-- ==================================================
-           Full-width interior image
-      =================================================== -->
-
-      <section
-        class="treatments-interior"
-        aria-label="Massagekamer"
-      >
-        <img
-          src="images/behandelingen/interior.jpg"
-          alt="Massagekamer van Sukanya Oosterse Massage Techniek"
-          loading="lazy"
-        >
-      </section>
-    </main>
-
-    <!-- ==================================================
-         Footer
-    =================================================== -->
-
-    <footer class="treatments-footer">
-      <div class="treatments-page-container treatments-footer__main">
-
-        <div class="treatments-footer__brand">
-          <a
-            href="index.html"
-            aria-label="Sukanya Oosterse Massage Techniek home"
-          >
-            <img
-              src="images/logo/sukanya-logo-gold.png"
-              alt="Sukanya Oosterse Massage Techniek"
-            >
-          </a>
-        </div>
-
-        <div class="treatments-footer__column">
-          <h2>Navigatie</h2>
-
-          <nav aria-label="Voetnavigatie">
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="behandelingen.html">Behandelingen</a></li>
-              <li><a href="tarieven.html">Tarieven</a></li>
-              <li><a href="over-sukanya.html">Over Sukanya</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-
-        <div class="treatments-footer__column">
-          <h2>Contact</h2>
+        <div class="site-footer__contact">
+          <h2 class="site-footer__title">
+            Contact
+          </h2>
 
           <address>
-            Julianalaan 8<br>
-            7761 XV<br>
-            Schoonebeek (NL)
+            <p class="site-footer__text">
+              Julianalaan 8<br>
+              7761 XV<br>
+              Schoonebeek (NL)
+            </p>
           </address>
         </div>
 
-        <div class="treatments-footer__column">
-          <h2>Openingstijden</h2>
+        <div class="site-footer__hours">
+          <h2 class="site-footer__title">
+            Openingstijden
+          </h2>
 
-          <p>
-            Maandag t/m Vrijdag<br>
+          <p class="site-footer__text">
+            Maandag t/m vrijdag<br>
             09:00 – 19:00
           </p>
 
-          <p>
+          <p class="site-footer__text">
             Uitsluitend op afspraak
           </p>
         </div>
       </div>
 
-      <div class="treatments-footer__bottom">
-        <div class="treatments-page-container">
+      <div class="site-footer__bottom">
+        <div class="container">
           <p>
-            © <span data-current-year></span>
+            © <span id="current-year">2026</span>
             Sukanya Oosterse Massage Techniek.
-            All rights reserved.
+            Alle rechten voorbehouden.
             Designed by Jenjira Huaisai.
           </p>
         </div>
@@ -460,7 +433,7 @@
     </footer>
   </div>
 
-  <script src="js/menu.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
+
 </html>
