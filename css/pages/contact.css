@@ -26,21 +26,6 @@
   object-position: center center;
 }
 
-.contact-hero__overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 255, 255, 0.98) 30%,
-      rgba(255, 255, 255, 0.86) 44%,
-      rgba(255, 255, 255, 0.28) 62%,
-      rgba(255, 255, 255, 0) 78%
-    );
-}
-
 .contact-hero__inner {
   position: relative;
   z-index: 1;
@@ -111,7 +96,7 @@
   color: var(--color-gold-dark);
 }
 
-.contact-card__icon svg {
+.contact-card__icon img {
   width: 30px;
   height: 30px;
   stroke: currentColor;

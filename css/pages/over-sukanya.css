@@ -11,7 +11,6 @@
   position: relative;
   min-height: 620px;
   overflow: hidden;
-  background-color: var(--color-cream-light);
 }
 
 .about-hero__media {
@@ -24,18 +23,6 @@
   height: 100%;
   object-fit: cover;
   object-position: center center;
-}
-
-.about-hero__overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background:
-    linear-gradient(90deg,
-      rgba(255, 255, 255, 0.98) 0%,
-      rgba(255, 255, 255, 0.95) 31%,
-      rgba(255, 255, 255, 0.72) 48%,
-      rgba(255, 255, 255, 0) 68%);
 }
 
 .about-hero__inner {
@@ -114,7 +101,7 @@
 }
 
 .about-biography__signature img {
-  width: 170px;
+  width: 150px;
   height: auto;
 }
 
@@ -144,6 +131,13 @@
 .about-values {
   padding-block: 94px 78px;
   background-color: var(--color-white);
+}
+
+.value-card__icon img {
+  width: 30px;
+  height: 30px;
+  display: block;
+  object-fit: contain;
 }
 
 /* ======================================================
@@ -241,6 +235,11 @@
       padding-inline: 40px;
     }
   }
+
+  .value-card__icon img {
+    width: 28px;
+    height: 28px;
+  }
 }
 
 /* ======================================================
@@ -321,6 +320,11 @@
     padding-block: 72px 62px;
   }
 
+  .value-card__icon img {
+    width: 26px;
+    height: 26px;
+  }
+  
   .about-cta {
     padding-block: 12px 72px;
   }

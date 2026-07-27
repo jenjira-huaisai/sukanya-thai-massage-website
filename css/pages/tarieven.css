@@ -228,6 +228,22 @@
 }
 
 /* ======================================================
+   Values
+====================================================== */
+
+.home-values {
+  padding-block: 88px;
+  background-color: var(--color-white);
+}
+
+.value-card__icon img {
+  width: 30px;
+  height: 30px;
+  display: block;
+  object-fit: contain;
+}
+
+/* ======================================================
    Interior image
 ====================================================== */
 
@@ -286,6 +302,17 @@
 
   .rates-interior {
     height: 62vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .home-values {
+    padding-block: 72px;
+  }
+
+  .value-card__icon img {
+    width: 28px;
+    height: 28px;
   }
 }
 
@@ -467,5 +494,27 @@
 
   .rates-interior img {
     object-position: 42% center;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-values {
+    padding-block: 56px;
+  }
+
+  .value-card__icon img {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-values {
+    padding-block: 44px;
+  }
+
+  .value-card__icon img {
+    width: 24px;
+    height: 24px;
   }
 }
